@@ -1,0 +1,69 @@
+                                 1.INSTALL UBUNTU
+
+  Download Virtual Box and install Ubuntu(www.ubuntu.com/download/desktop).
+  Change network setup into NAT.
+
+
+  Open terminal.
+
+sudo passwd root.
+  input your SU password.
+
+
+                       2.INSTALL Software Development Environment
+  Open terminal.
+
+sudo apt-get install git 
+sudo apt-get install gcc
+sudo apt-get install g++
+
+                                3.GIT,BIT,and SSH 
+  sign up for github(github.com)
+  sign up for bitbucket(bitbucket.org)
+
+  Open terminal.
+
+git config --global user.name 'YOUR GITHUB NAME'
+git config --global user.email YOUR EMAIL
+cd ~/.ssh
+cp id_rsa* backupfolder/
+ssh-keygen -t rsa -C"YOUR EMAIL"
+
+  enter 3 times
+
+ssh-add
+gedit id_rsa.pub
+
+  Then copy content.
+
+
+  sign in github.
+  click profile picture and find "Settings".
+  choose "SSH and GPG keys".
+  choose"New SSH key"
+  paste.
+
+                                 4.CREATE ONE REPOSITORY
+  Open terminal.
+
+mkdir myfirstrepo
+cd myfirstrepo
+pwd
+
+git init
+
+
+  write a tutorial text like this.
+  Open terminal.
+git add YOURFILENAME.txt
+git commit -m "YOUR FILE'S SIGN"
+  
+  sign in git.
+  find "create a new repo"
+  write your repo's name and click "create repo"
+
+  Open terminal under "myfirstrepo index".
+git remote add origin git@github.com:YOURGITNAME/myfirstrepo.git
+git push -u origin master
+
+  Now you can push your file to git.
